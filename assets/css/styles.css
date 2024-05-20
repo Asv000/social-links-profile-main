@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary: hsl(75, 94%, 57%);
+	--white: hsl(0, 0%, 100%);
+	--grey: hsl(0, 0%, 20%);
+	--dark-grey: hsl(0, 0%, 12%);
+	--off-black: hsl(0, 0%, 8%);
+}
+@font-face {
+	font-family: Inter;
+	src: url('../fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+body {
+	height: 100%;
+	min-height: 100vh;
+	width: 100%;
+	background-color: var(--off-black);
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+}
+.container {
+	flex-direction: column;
+	width: 384px;
+	padding: 40px;
+	border-radius: 12px;
+	background-color: var(--dark-grey);
+}
+.profile__pic {
+	width: 88px;
+	height: 88px;
+	margin-bottom: 24px;
+	border-radius: 50%;
+}
+.profile__name {
+	color: var(--white);
+	font-size: 24px;
+	font-weight: 500;
+}
+.profile__location {
+	margin-bottom: 24px;
+	color: var(--primary);
+	font-weight: bold;
+	line-height: 2.5;
+}
+.profile__description {
+	margin-bottom: 24px;
+	color: var(--white);
+	font-weight: 300;
+}
+.social__link-btn {
+	width: 100%;
+	padding: 15px 0;
+	border-radius: 8px;
+	color: var(--white);
+	background-color: var(--grey);
+	border: none;
+	font-weight: bold;
+	font-family: 'Inter';
+}
+.social__link-btn:not(:last-child) {
+	margin-bottom: 16px;
+}
+.social__link-btn:hover {
+	background-color: var(--primary);
+	color: var(--off-black);
+}
+/* DON'T REPEAT YOURSELF */
+body, .container {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* media */
+@media (max-width: 320px) {
+	.container {
+		max-width: 272px;
+		padding: 24px;
+	}
+	.profile__description {
+		font-size: 12px;
+	}
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+	.container {
+		max-width: 327px;
+		padding: 24px;
+	}
+}
